@@ -1,4 +1,4 @@
-angular.module('app.controllers', ['firebase'])
+angular.module('app.controllers', [])
 
 .controller('sWLuzCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
@@ -13,9 +13,8 @@ function ($scope, $stateParams) {
     function fn_ok(rta){
       var lat = rta.coords.latitude;
       var lon = rta.coords.longitude;
-
       return lat && lon;
-}
+  }
 };
 
     $scope.posicaoatual = function(NgMap){
@@ -63,13 +62,11 @@ function ($scope, $stateParams) {
 
 }])
 
-.controller('solicitaODeServiOSWLuzCtrl', ['$scope', '$stateParams', '$firebase' // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+.controller('solicitaODeServiOSWLuzCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams, $firebaseObject) {
+function ($scope, $stateParams) {
 
-var ref = firebase.database().ref();
-$scope.name = $firebaseObject(ref);
 
 }])
 

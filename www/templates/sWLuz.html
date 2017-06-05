@@ -1,6 +1,7 @@
 <ion-view title="SW-luz" id="page1">
   <ion-content padding="true" class="has-header">
     <div style="margin: 0px; line-height: 250px; background-color: rgb(232, 235, 239); text-align: center;">
+
       <div>
       <ng-map center=[posicao]></ng-map>
     </div>
@@ -8,5 +9,8 @@
 
     <a ui-sref="menu.solicitaODeServiOSWLuz()" id="sWLuz-button8" class="button button-positive button-block">Solicitar serviço</a>
     <a ui-sref="menu.pedido()" id="sWLuz-button9" class="button button-positive button-block">Consultar pedido</a>
+    <ion-item ng-repeat="item in items">
+     {{item.name}}
+   </ion-item>
   </ion-content>
 </ion-view>
